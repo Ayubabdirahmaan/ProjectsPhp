@@ -1,22 +1,31 @@
 <?php
-    $people= array(
-        array("Ahmed", "6564664", "madina"),
-        array("salah", "4884", "karan"),
-        array("sharnka", "232222", "hodan")
-    )
+// $people= array(
+//     array("Ahmed", "6564664", "madina"),
+//     array("salah", "4884", "karan"),
+//     array("sharnka", "232222", "hodan")
+// )
+$db = new mysqli('localhost', 'root', '', 'ifis1');
+$sql = 'select * from jobs';
+$result = $db->query($sql);
+$cols = $result->fetch_fields();
+// echo $cols;
 ?>
 <table>
     <thead>
-        <tr><th>Name</th><th>phone</th><th>Address</th></tr>
+        <tr>
+            <?php foreach ($cols as $key => $value) : ?>
+                <th><?php echo $value->name ?></th>
+            <?php endforeach ?>
+        </tr>
     </thead>
     <tbody>
-        <?php foreach($people as $key => $row): ?>
+        <?php foreach ($result as $key => $row): ?>
             <tr>
-                <?php foreach($row as $key => $value[0]): ?>
+                <?php foreach ($row as $key => $value): ?>
                     <td>
-                        <?php echo $value[0]; ?>
+                        <?php echo $value; ?>
                     </td>
-                    <?php endforeach ?>
+                <?php endforeach ?>
             </tr>
         <?php endforeach ?>
     </tbody>
