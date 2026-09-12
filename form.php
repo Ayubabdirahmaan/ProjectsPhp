@@ -6,10 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="database.php" method="post">
+    <form action="database.php" method="Post">
         <p>Enter title: <input type="text" name="txt1"></p>
         <p>Enter salary: <input type="text" name="txt2"></p>
-
         <input type="submit" value="save">
     </form>
 </body>

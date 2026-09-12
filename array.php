@@ -4,10 +4,10 @@
 //     array("salah", "4884", "karan"),
 //     array("sharnka", "232222", "hodan")
 // )
-$db = new mysqli('localhost', 'root', '', 'ifis1');
-$sql = 'select * from jobs';
-$result = $db->query($sql);
-$cols = $result->fetch_fields();
+$db=new mysqli('localhost', 'root', '', 'ifis1');
+$sql='select * from jobs';
+$result=$db->query($sql);
+$cols=$result->fetch_fields();
 // echo $cols;
 ?>
 <table>
