@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="upload.php" method="Post" enctype="multipart/form-data">
-        <p>Image: <input type="file" name="txtf"></p>
+        <p>Images: <input type="file" name="txtf"></p>
         <input type="submit" value="upload">
     </form>
 </body>
