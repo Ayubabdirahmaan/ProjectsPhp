@@ -4,5 +4,5 @@ $title=$_REQUEST['txt1'];
 $salary=$_REQUEST['txt2'];
 $sql="insert into jobs values(null,'$title','$salary')";
 $r=$db->query($sql);
-   echo $r==1? 'operation is done successfull' : 'failed';
+   echo $r==1? 'operation is done successfull man' : 'failed';
 ?>
